@@ -3,6 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <title>Contact Sheriff Zuchowski</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    form {
+      max-width: 700px;
+    }
+    textarea {
+      width: 80%;
+      height: 60vh;
+      min-height: 200px;
+      font-family: monospace;
+      font-size: 1em;
+      box-sizing: border-box;
+    }
+    input[type="email"],
+    input[type="text"] {
+      width: 80%;
+      box-sizing: border-box;
+      font-size: 1em;
+    }
+    label {
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
   <h1>Contact Sheriff Zuchowski</h1>
@@ -16,7 +41,7 @@
     </label><br><br>
 
     <label>Your message:<br>
-      <textarea name="message" rows="18" cols="80">Dear Sheriff Zuchowski,
+      <textarea name="message">Dear Sheriff Zuchowski,
 
 I am writing as a concerned member of the public who recently learned that you hired Dan Lajack to serve in the Portage County Sheriff’s Office just three weeks after he resigned from his previous position in Lake County.
 
@@ -31,7 +56,8 @@ Therefore, I respectfully request the following:
 
 I believe leadership means not just hiring capable individuals, but holding them accountable when they fall short of the public’s trust. I urge you to take this opportunity to demonstrate your commitment to integrity, transparency, and equal protection under the law.
 
-Sincerely,</textarea>
+Sincerely,
+[Your name]</textarea>
     </label><br><br>
 
     <button type="submit">Send Email</button>
