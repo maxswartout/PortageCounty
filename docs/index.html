@@ -37,11 +37,11 @@
     </label><br><br>
 
     <label>Your name:<br>
-      <input type="text" name="name" required>
+      <input type="text" name="name" id="nameInput" required>
     </label><br><br>
 
     <label>Your message:<br>
-      <textarea name="message">Dear Sheriff Zuchowski,
+      <textarea name="message" id="messageBox">Dear Sheriff Zuchowski,
 
 I am writing as a concerned member of the public who recently learned that you hired Dan Lajack to serve in the Portage County Sheriff’s Office just three weeks after he resigned from his previous position in Lake County.
 
@@ -57,10 +57,23 @@ Therefore, I respectfully request the following:
 I believe leadership means not just hiring capable individuals, but holding them accountable when they fall short of the public’s trust. I urge you to take this opportunity to demonstrate your commitment to integrity, transparency, and equal protection under the law.
 
 Sincerely,
-[Your name]</textarea>
+</textarea>
     </label><br><br>
 
     <button type="submit">Send Email</button>
   </form>
+
+  <script>
+    const nameInput = document.getElementById('nameInput');
+    const messageBox = document.getElementById('messageBox');
+    const originalMessage = messageBox.value.trim();
+
+    nameInput.addEventListener('input', function() {
+      let name = nameInput.value.trim();
+      // Ensure there is always a newline after Sincerely,
+      let message = originalMessage.replace(/Sincerely,\s*([\s\S]*)?$/, 'Sincerely,\n' + (name ? name : ''));
+      messageBox.value = message;
+    });
+  </script>
 </body>
 </html>
